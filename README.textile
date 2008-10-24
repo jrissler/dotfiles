@@ -1,4 +1,4 @@
-This are my personal dotfiles.
+These are my personal dotfiles. This repo was inspired by "a post from Err the Blog":http://errtheblog.com/posts/89-huba-huba
 
 h2. Setup Instructions
 
@@ -7,5 +7,3 @@ h2. Setup Instructions
 	cd dotfiles
 	ruby make_symlinks.rb
 </pre>
-
-Inspired by "a post from Err the Blog":http://errtheblog.com/posts/89-huba-huba
