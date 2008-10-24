@@ -1,0 +1,86 @@
+export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sphinx/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql83/bin:$PATH"
+export PS1="\w >"
+export HISTSIZE=100000
+export HISTFILESIZE=409600
+export EDITOR="mate -w"
+
+# Getting around
+alias ..='cd ..'
+alias la='ls -Alh'
+alias f='open -a ForkLift $1'
+
+# Projects
+alias cdp='cd ~/Projects'
+alias z='cd ~/Projects/elc/givezooks/trunk/'
+alias lang='cd ~/Projects/elc/lang/trunk/'
+alias q='cd ~/Projects/personal/queriac/trunk/'
+alias boba='cd ~/Projects/rgc/bobateacompany.com/trunk'
+alias cm='cd ~/Projects/rgc/coffeemystica.com/trunk'
+
+# A substitute for cd that gives it history.
+function cd {
+  pushd . -n > /dev/null
+  pushd $1 > /dev/null
+  popd -n > /dev/null
+}
+# Use this to go back through the 'cd' history
+alias b='popd > /dev/null'
+
+# Toggle between two directories
+alias swap="cd $OLDPWD"
+
+# Ruby/Rails
+alias mater='mate app config db doc lib public spec'
+alias materp='mate app config db doc lib public spec vendor'
+alias c='script/console'
+alias s='script/server'
+alias irb='irb --readline -r irb/completion'  
+alias gemlist='gem list | egrep -v "^( |$)"'
+alias rdoc="gem server & sleep 1; open 'http://localhost:8808'"
+alias pdoc="open -a Firefox ./doc/plugins/"   
+alias rdm="rake db:migrate"
+
+# gemdoc command
+# snagged from http://stephencelis.com/archive/2008/6/bashfully-yours-gem-shortcuts
+export GEMDIR=`gem env gemdir`
+gemdoc() {
+  open $GEMDIR/doc/`$(which ls) $GEMDIR/doc | grep $1 | sort | tail -1`/rdoc/index.html
+}
+_gemdocomplete() {
+  COMPREPLY=($(compgen -W '$(`which ls` $GEMDIR/doc)' -- ${COMP_WORDS[COMP_CWORD]}))
+  return 0
+}
+complete -o default -o nospace -F _gemdocomplete gemdoc
+
+
+# Rake task tab-completion, by Ryan Garver
+export COMP_WORDBREAKS=${COMP_WORDBREAKS/\:/}
+_rakecomplete() {
+  COMPREPLY=($(compgen -W "`rake -s -T | awk '{{print $2}}'`" -- ${COMP_WORDS[COMP_CWORD]}))
+  return 0
+}
+complete -o default -o nospace -F _rakecomplete rake
+
+alias start_postgres="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ctl -D /opt/local/var/db/postgresql83/defaultdb -l /opt/local/var/db/postgresql83/defaultdb/logfile start'"
+alias stop_postgres="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ctl -D /opt/local/var/db/postgresql83/defaultdb -l /opt/local/var/db/postgresql83/defaultdb/logfile stop'"
+
+# SSH
+alias sshs='ssh serveradmin@sikelianos.com@sikelianos.com'
+alias sshq='ssh zeke@queri.ac'
+alias sshgs='ssh serveradmin@givezookssupport.com@givezookssupport.com'
+alias sshl='ssh lang@staging.lang.elctech.com'
+alias sshr_old='ssh root@67.19.146.186'
+alias sshr='ssh root@174.133.236.18'
+alias slice='ssh root@209.20.73.226'
+
+# Dotfile
+alias settings='mate ~/.bash_login'
+alias backup='scp ~/.bash_login serveradmin@sikelianos.com@sikelianos.com:domains/zeke.sikelianos.com/html/vault/backup/preferences/bash_login.txt'
+alias download='scp serveradmin@sikelianos.com@sikelianos.com:domains/zeke.sikelianos.com/html/vault/backup/preferences/bash_login.txt ~/.bash_login; dot_load;'
+alias load='source ~/.bash_login; echo ".bash_login sourced"'
+
+# Git
+alias gb='git branch -a -v'
+alias gs='git status'
+alias gc='git commit -a'
+alias gd='git diff'
