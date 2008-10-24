@@ -2,8 +2,10 @@ This are my personal dotfiles.
 
 h2. Setup Instructions
 
-# git clone git@github.com:zeke/dotfiles.git
-# cd dotfiles
-# ruby make_symlinks.rb
+<pre>
+	git clone git@github.com:zeke/dotfiles.git
+	cd dotfiles
+	ruby make_symlinks.rb
+</pre>
 
-_Inspired by "a post from Err the Blog":http://errtheblog.com/posts/89-huba-huba_
+Inspired by "a post from Err the Blog":http://errtheblog.com/posts/89-huba-huba
