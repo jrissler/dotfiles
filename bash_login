@@ -12,10 +12,13 @@ alias f='open -a ForkLift $1'
 # Projects
 alias cdp='cd ~/Projects'
 alias z='cd ~/Projects/elc/givezooks/trunk/'
-alias lang='cd ~/Projects/elc/lang/trunk/'
+alias za='cd ~/Projects/elc/givezooks/assets/'
 alias q='cd ~/Projects/personal/queriac/trunk/'
-alias boba='cd ~/Projects/rgc/bobateacompany.com/trunk'
+alias qa='cd ~/Projects/personal/queriac/assets/'
+alias b='cd ~/Projects/rgc/bobateacompany.com/trunk'
+alias ba='cd ~/Projects/rgc/bobateacompany.com/assets'
 alias cm='cd ~/Projects/rgc/coffeemystica.com/trunk'
+alias cma='cd ~/Projects/rgc/coffeemystica.com/assets'
 
 # A substitute for cd that gives it history. (doesn't work right for directories containing spaces)
 function cd {
