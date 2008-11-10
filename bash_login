@@ -32,6 +32,11 @@ alias b='popd > /dev/null'
 # Toggle between two directories
 alias swap="cd $OLDPWD"
 
+# Recursively remove all .svn directories from the current directory
+function rm_svn {
+  find . -name .svn -print0 | xargs -0 rm -rf
+}
+
 # Ruby/Rails
 alias mater='mate app config db doc lib public spec'
 alias materp='mate app config db doc lib public spec vendor'
