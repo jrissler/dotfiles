@@ -69,3 +69,9 @@ alias gb='git branch -a -v'
 alias gs='git status'
 alias gc='git commit -a'
 alias gd='git diff'
+
+function autopush {
+  echo 'git push' > .git/hooks/post-commit
+  chmod 755 .git/hooks/post-commit
+  echo 'This git repo now pushes automatically post-commit'
+}
