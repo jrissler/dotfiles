@@ -21,11 +21,11 @@ alias cm='cd ~/Projects/rgc/coffeemystica.com/trunk'
 alias cma='cd ~/Projects/rgc/coffeemystica.com/assets'
 
 # A substitute for cd that gives it history. (doesn't work right for directories containing spaces)
-function cd {
-  pushd . -n > /dev/null
-  pushd $1 > /dev/null
-  popd -n > /dev/null
-}
+# function cd {
+#   pushd . -n > /dev/null
+#   pushd $1 > /dev/null
+#   popd -n > /dev/null
+# }
 # Use this to go back through the 'cd' history
 alias b='popd > /dev/null'
 
@@ -35,6 +35,18 @@ alias swap="cd $OLDPWD"
 # Recursively remove all .svn directories from the current directory
 function rm_svn {
   find . -name .svn -print0 | xargs -0 rm -rf
+}
+
+function push_all_gits {
+  ruby ~/Projects/personal/dotfiles/push_all_gits.rb
+}
+
+function pull_all_gits {
+  ruby ~/Projects/personal/dotfiles/pull_all_gits.rb
+}
+
+function push_and_pull {
+  pull_all_gits && pull_all_gits
 }
 
 # Ruby/Rails
