@@ -11,8 +11,9 @@ alias f='open -a ForkLift $1'
 
 # Projects
 alias cdp='cd ~/Projects'
-alias z='cd ~/Projects/elc/givezooks/trunk/'
-alias za='cd ~/Projects/elc/givezooks/assets/'
+alias z='cd ~/Projects/givezooks/trunk/'
+alias za='cd ~/Projects/givezooks/assets/'
+alias zh='cd ~/Projects/givezooks/side_projects/zhook/'
 alias q='cd ~/Projects/personal/queriac/trunk/'
 alias qa='cd ~/Projects/personal/queriac/assets/'
 alias b='cd ~/Projects/rgc/bobateacompany.com/trunk'
