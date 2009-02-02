@@ -8,14 +8,15 @@ export EDITOR="mate -w"
 alias ..='cd ..'
 alias la='ls -Alh'
 alias f='open -a ForkLift $1'
+alias dot='cd ~/Projects/personal/dotfiles'
 
 # Projects
 alias cdp='cd ~/Projects'
-alias z='cd ~/Projects/givezooks/trunk/'
-alias za='cd ~/Projects/givezooks/assets/'
+alias z='cd ~/Projects/givezooks/trunk'
+alias za='cd ~/Projects/givezooks/assets'
 alias zh='cd ~/Projects/givezooks/side_projects/zhook/trunk'
-alias q='cd ~/Projects/personal/queriac/trunk/'
-alias qa='cd ~/Projects/personal/queriac/assets/'
+alias q='cd ~/Projects/personal/queriac/trunk'
+alias qa='cd ~/Projects/personal/queriac/assets'
 alias b='cd ~/Projects/rgc/bobateacompany.com/trunk'
 alias ba='cd ~/Projects/rgc/bobateacompany.com/assets'
 alias cm='cd ~/Projects/rgc/coffeemystica.com/trunk'
@@ -52,8 +53,8 @@ function push_and_pull {
 }
 
 # Ruby/Rails
-alias mater='mate app config db doc lib public spec'
-alias materp='mate app config db doc lib public spec vendor'
+alias mater='mate app config db doc lib public spec README README.textile README.markdown'
+alias materp='mate app config db doc lib public spec vendor README README.textile README.markdown'
 alias c='script/console'
 alias s='script/server'
 alias irb='irb'  
