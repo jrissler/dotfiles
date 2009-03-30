@@ -7,8 +7,14 @@ export EDITOR="mate -w"
 # Getting around
 alias ..='cd ..'
 alias la='ls -Alh'
-alias f='open -a ForkLift $1'
+alias fl='open -a ForkLift $1'
 alias dot='cd ~/Projects/personal/dotfiles'
+
+# Find all files and directories in the current path
+function ffa() { find . -iname '*'$*'*' ; }
+
+# Find all non-hidden files and non-svn directories in the current path
+function ff() { find . -iname '*'$*'*' ! -iname ".*" ! -iname "*.svn*" ; }
 
 # Projects
 alias cdp='cd ~/Projects'
@@ -22,6 +28,8 @@ alias ba='cd ~/Projects/rgc/bobateacompany.com/assets'
 alias cm='cd ~/Projects/rgc/coffeemystica.com/trunk'
 alias cma='cd ~/Projects/rgc/coffeemystica.com/assets'
 alias fu='cd ~/Projects/gemini/fractured_u/trunk'
+alias fua='cd ~/Projects/gemini/fractured_u/assets'
+alias tc='cd ~/Projects/personal/trajet_colle/'
 
 # A substitute for cd that gives it history. (doesn't work right for directories containing spaces)
 # function cd {
