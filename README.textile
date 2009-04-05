@@ -3,7 +3,15 @@ These are my personal dotfiles. This repo was inspired by "a post from Err the B
 h2. Setup Instructions
 
 <pre>
-	git clone git@github.com:zeke/dotfiles.git
-	cd dotfiles
-	ruby make_symlinks.rb
+git clone git@github.com:zeke/dotfiles.git
+cd dotfiles
+ruby make_symlinks.rb
+</pre>
+
+h2. Mobile Dotfile
+
+I've got a "mobile_dotfile gist":http://gist.github.com/90574 set up with some aliases I like to use on remoter servers.
+
+<pre>
+curl http://gist.github.com/raw/90574/ccea82b7b9999a63ba3d2e90fdb15690b4658e11/mobile_dotfile >> ~/.bashrc
 </pre>
