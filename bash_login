@@ -70,6 +70,7 @@ alias gemlist='gem list | egrep -v "^( |$)"'
 alias rdoc="gem server & sleep 1; open 'http://localhost:8808'"
 alias pdoc="open -a Firefox ./doc/plugins/"   
 alias rdm="rake db:migrate"
+alias rdr="rake db:rollback"
 alias cov="open ./coverage/index.html"
 
 alias start_postgres="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ctl -D /opt/local/var/db/postgresql83/defaultdb -l /opt/local/var/db/postgresql83/defaultdb/logfile start'"
