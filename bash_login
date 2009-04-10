@@ -10,11 +10,15 @@ alias la='ls -Alh'
 alias fl='open -a ForkLift $1'
 alias dot='cd ~/Projects/personal/dotfiles'
 
-# Find all files and directories in the current path
-function ffa() { find . -iname '*'$*'*' ; }
 
-# Find all non-hidden files and non-svn directories in the current path
-function ff() { find . -iname '*'$*'*' ! -iname ".*" ! -iname "*.svn*" ; }
+# Find all non-hidden files in the current path
+function ff() { find . -iname '*'$*'*' -type f ! -iname ".*" ! -iname "*.svn*" ; }
+
+# Find all non-hidden directories in the current path
+function fd() { find . -iname '*'$*'*' -type d ! -iname ".*" ! -iname "*.svn*"; }
+
+# Find all files and directories in the current path
+function fa() { find . -iname '*'$*'*' ; }
 
 # Projects
 alias cdp='cd ~/Projects'
