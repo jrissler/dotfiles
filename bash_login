@@ -34,6 +34,7 @@ alias cma='cd ~/Projects/rgc/coffeemystica.com/assets'
 alias fu='cd ~/Projects/gemini/fractured_u/trunk'
 alias fua='cd ~/Projects/gemini/fractured_u/assets'
 alias tc='cd ~/Projects/personal/trajet_colle/'
+alias met='cd ~/Projects/ucsb/musique_et_torture/'
 
 # A substitute for cd that gives it history. (doesn't work right for directories containing spaces)
 # function cd {
