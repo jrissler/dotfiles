@@ -33,6 +33,7 @@ alias cm='cd ~/Projects/rgc/coffeemystica.com/trunk'
 alias cma='cd ~/Projects/rgc/coffeemystica.com/assets'
 alias fu='cd ~/Projects/gemini/fractured_u/trunk'
 alias fua='cd ~/Projects/gemini/fractured_u/assets'
+alias fctd='cd ~/Projects/gemini/fctd/branches/rails-0.1'
 alias tc='cd ~/Projects/personal/trajet_colle/'
 alias met='cd ~/Projects/ucsb/musique_et_torture/'
 
