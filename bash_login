@@ -8,6 +8,8 @@ export EDITOR="mate -w"
 alias ..='cd ..'
 alias la='ls -Alh'
 alias fl='open -a ForkLift $1'
+alias ps='open -a "Adobe Photoshop CS4" $1'
+alias il='open -a "Adobe Illustrator" $1' # Not sure why this doesn't need the 'CS4' part
 alias dot='cd ~/Projects/personal/dotfiles'
 
 
@@ -34,6 +36,7 @@ alias cma='cd ~/Projects/rgc/coffeemystica.com/assets'
 alias fu='cd ~/Projects/gemini/fractured_u/trunk'
 alias fua='cd ~/Projects/gemini/fractured_u/assets'
 alias fctd='cd ~/Projects/gemini/fctd/branches/rails-0.1'
+alias fctda='cd ~/Projects/gemini/fctd/assets'
 alias tc='cd ~/Projects/personal/trajet_colle/'
 alias met='cd ~/Projects/ucsb/musique_et_torture/'
 
