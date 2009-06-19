@@ -70,7 +70,7 @@ function push_and_pull {
 }
 
 # Ruby/Rails
-alias mater='mate app config db doc lib public spec README README.textile README.markdown'
+alias mater='mate app config db doc lib public test spec README README.textile README.markdown'
 alias materp='mate app config db doc lib public spec vendor README README.textile README.markdown'
 alias c='script/console'
 alias s='script/server'
@@ -101,8 +101,10 @@ alias refresh='source ~/.bash_login; echo ".bash_login sourced"'
 # Git
 alias gb='git branch -a -v'
 alias gs='git status'
-alias gc='git commit -a'
-alias gd='git diff'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gd='git diff -v'
+
 
 function autopush {
   echo 'git push' > .git/hooks/post-commit
