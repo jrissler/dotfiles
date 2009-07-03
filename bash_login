@@ -24,21 +24,31 @@ function fa() { find . -iname '*'$*'*' ; }
 
 # Projects
 alias cdp='cd ~/Projects'
-alias z='cd ~/Projects/givezooks/trunk'
-alias za='cd ~/Projects/givezooks/assets'
-alias zh='cd ~/Projects/givezooks/side_projects/zhook/trunk'
-alias q='cd ~/Projects/personal/queriac/trunk'
-alias qa='cd ~/Projects/personal/queriac/assets'
-alias b='cd ~/Projects/rgc/bobateacompany.com/trunk'
-alias ba='cd ~/Projects/rgc/bobateacompany.com/assets'
-alias cm='cd ~/Projects/rgc/coffeemystica.com/trunk'
-alias cma='cd ~/Projects/rgc/coffeemystica.com/assets'
+
+# Projects: Gemini
 alias fu='cd ~/Projects/gemini/fractured_u/trunk'
 alias fua='cd ~/Projects/gemini/fractured_u/assets'
-alias fctd='cd ~/Projects/gemini/fctd/git/'
-alias fctda='cd ~/Projects/gemini/fctd/svn/assets'
+alias fctd='cd ~/Projects/gemini/fctd/app/'
+alias fctda='cd ~/Projects/gemini/fctd/assets'
+alias pd='cd ~/Projects/gemini/place_and_displaced/app'
+alias pda='cd ~/Projects/gemini/place_and_displaced/assets'
+
+# Projects: Personal
 alias tc='cd ~/Projects/personal/trajet_colle/'
 alias met='cd ~/Projects/ucsb/musique_et_torture/'
+alias q='cd ~/Projects/personal/queriac/trunk'
+alias qa='cd ~/Projects/personal/queriac/assets'
+
+# Projects: Old
+# alias b='cd ~/Projects/rgc/bobateacompany.com/trunk'
+# alias ba='cd ~/Projects/rgc/bobateacompany.com/assets'
+# alias cm='cd ~/Projects/rgc/coffeemystica.com/trunk'
+# alias cma='cd ~/Projects/rgc/coffeemystica.com/assets'
+# alias z='cd ~/Projects/givezooks/trunk'
+# alias za='cd ~/Projects/givezooks/assets'
+# alias zh='cd ~/Projects/givezooks/side_projects/zhook/trunk'
+
+
 
 # A substitute for cd that gives it history. (doesn't work right for directories containing spaces)
 # function cd {
@@ -47,7 +57,7 @@ alias met='cd ~/Projects/ucsb/musique_et_torture/'
 #   popd -n > /dev/null
 # }
 # Use this to go back through the 'cd' history
-alias b='popd > /dev/null'
+# alias b='popd > /dev/null'
 
 # Toggle between two directories
 alias swap="cd $OLDPWD"
