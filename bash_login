@@ -6,6 +6,9 @@ export EDITOR="mate -w"
 
 # Getting around
 alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
 alias la='ls -Alh'
 alias fl='open -a ForkLift $1'
 alias ps='open -a "Adobe Photoshop CS4" $1'
@@ -96,6 +99,7 @@ alias start_postgres="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ct
 alias stop_postgres="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ctl -D /opt/local/var/db/postgresql83/defaultdb -l /opt/local/var/db/postgresql83/defaultdb/logfile stop'"
 
 # SSH
+alias sshfa='ssh deploy@faweb1.geminisbs.net'
 alias sshs='ssh serveradmin@sikelianos.com@sikelianos.com'
 alias sshq='ssh zeke@queri.ac'
 alias sshgs='ssh serveradmin@givezookssupport.com@givezookssupport.com'
