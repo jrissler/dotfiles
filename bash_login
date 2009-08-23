@@ -95,6 +95,8 @@ alias rdm="rake db:migrate"
 alias rdr="rake db:rollback"
 alias cov="open ./coverage/index.html"
 
+# Misc aliases
+alias mm='mate /Library/Application\ Support/Macromedia/mm.cfg'
 alias start_postgres="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ctl -D /opt/local/var/db/postgresql83/defaultdb -l /opt/local/var/db/postgresql83/defaultdb/logfile start'"
 alias stop_postgres="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ctl -D /opt/local/var/db/postgresql83/defaultdb -l /opt/local/var/db/postgresql83/defaultdb/logfile stop'"
 
