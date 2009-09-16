@@ -15,6 +15,12 @@ alias ps='open -a "Adobe Photoshop CS4" $1'
 alias il='open -a "Adobe Illustrator" $1' # Not sure why this doesn't need the 'CS4' part
 alias dot='cd ~/Projects/personal/dotfiles'
 
+# These aliases assume that mysql was installed using the Hivelogic tutorial..
+# http://hivelogic.com/articles/compiling-mysql-on-snow-leopard/
+alias mysql_start='sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist'
+alias mysql_stop='sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist'
+
+# Reminder: use command 'gembox' to read local gem documentation!
 
 # Find all non-hidden files in the current path
 function ff() { find . -iname '*'$*'*' -type f ! -iname ".*" ! -iname "*.svn*" ; }
