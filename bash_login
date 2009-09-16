@@ -20,6 +20,10 @@ alias dot='cd ~/Projects/personal/dotfiles'
 alias mysql_start='sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist'
 alias mysql_stop='sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist'
 
+function mysqldump_all {
+  for I in $(mysql -uroot -e 'show databases' -s --skip-column-names); do mysqldump -uroot $I | gzip > "$I.sql.gz"; done
+}
+
 # Reminder: use command 'gembox' to read local gem documentation!
 
 # Find all non-hidden files in the current path
