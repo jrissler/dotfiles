@@ -44,7 +44,7 @@ alias fua='cd ~/Projects/gemini/fractured_u/assets'
 alias fctd='cd ~/Projects/gemini/fctd/rails/'
 alias fctda='cd ~/Projects/gemini/fctd/assets'
 alias pd='cd ~/Projects/gemini/place_and_displaced/rails'
-alias pda='cd ~/Projects/gemini/place_and_displaced/assets'
+alias tad='cd ~/Projects/gemini/tadnet'
 
 # Projects: Personal
 alias tc='cd ~/Projects/personal/trajet_colle/'
