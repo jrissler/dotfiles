@@ -17,3 +17,6 @@
   added = yellow
   changed = green
   untracked = cyan
+[github]
+	user = zeke
+	token = eb9d26516f154ba2c81fce9694c83efd

@@ -141,3 +141,6 @@ function autopush {
   chmod 755 .git/hooks/post-commit
   echo 'This git repo now pushes automatically post-commit'
 }
+
+# Default path
+pd
