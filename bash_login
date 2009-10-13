@@ -144,4 +144,4 @@ function autopush {
 }
 
 # Default path
-tadu
+cdp
