@@ -33,7 +33,7 @@ function ff() { find . -iname '*'$*'*' -type f ! -iname ".*" ! -iname "*.svn*" ;
 function fd() { find . -iname '*'$*'*' -type d ! -iname ".*" ! -iname "*.svn*"; }
 
 # Find all files and directories in the current path
-function fa() { find . -iname '*'$*'*' ; }
+function f() { find . -iname '*'$*'*' ; }
 
 # Projects
 alias cdp='cd ~/Projects'
@@ -44,6 +44,7 @@ alias fua='cd ~/Projects/gemini/fractured_u/assets'
 alias fctd='cd ~/Projects/gemini/fctd/rails/'
 alias fctda='cd ~/Projects/gemini/fctd/assets'
 alias pd='cd ~/Projects/gemini/place_and_displaced/rails'
+alias fa='cd ~/Projects/gemini/fractured_atlas'
 alias tad='cd ~/Projects/gemini/tadnet'
 alias tadu='cd ~/Projects/gemini/tadnet/tacc_user_manager'
 alias tadc='cd ~/Projects/gemini/tadnet/tacc_user_manager/vendor/plugins/tacc_common'
@@ -142,6 +143,3 @@ function autopush {
   chmod 755 .git/hooks/post-commit
   echo 'This git repo now pushes automatically post-commit'
 }
-
-# Default path
-cdp
