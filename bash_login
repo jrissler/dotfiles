@@ -35,6 +35,14 @@ function fd() { find . -iname '*'$*'*' -type d ! -iname ".*" ! -iname "*.svn*"; 
 # Find all files and directories in the current path
 function f() { find . -iname '*'$*'*' ; }
 
+# http://elsethenif.wordpress.com/2009/06/11/open-a-new-tab-on-terminal-with-the-same-path-on-mac-os-x/
+function tab {
+	osascript -e "
+		tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
+		tell application \"Terminal\" to do script \"cd $PWD \" in selected tab of the front window
+	" > /dev/null 2>&1
+}
+
 # Projects
 alias cdp='cd ~/Projects'
 
