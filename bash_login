@@ -104,8 +104,8 @@ function push_and_pull {
 }
 
 # Ruby/Rails
-alias mater='mate app config db doc lib public test spec README README.textile README.markdown'
-alias materp='mate app config db doc lib public spec vendor README README.textile README.markdown'
+alias mater='mate app config db doc lib public test spec README*'
+alias materp='mate app config db doc lib public spec vendor README*'
 alias c='script/console'
 alias s='script/server'
 alias irb='irb'  
