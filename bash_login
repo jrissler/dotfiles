@@ -33,7 +33,7 @@ function ff() { find . -iname '*'$*'*' -type f ! -iname ".*" ! -iname "*.svn*" ;
 function fd() { find . -iname '*'$*'*' -type d ! -iname ".*" ! -iname "*.svn*"; }
 
 # Find all files and directories in the current path
-function f() { find . -iname '*'$*'*' ; }
+function fa() { find . -iname '*'$*'*' ; }
 
 # http://elsethenif.wordpress.com/2009/06/11/open-a-new-tab-on-terminal-with-the-same-path-on-mac-os-x/
 function tab {
@@ -52,10 +52,11 @@ alias fua='cd ~/Projects/gemini/fractured_u/assets'
 alias fctd='cd ~/Projects/gemini/fctd/rails/'
 alias fctda='cd ~/Projects/gemini/fctd/assets'
 alias pd='cd ~/Projects/gemini/place_and_displaced/rails'
-alias fa='cd ~/Projects/gemini/fractured_atlas'
+alias atlas='cd ~/Projects/gemini/fractured_atlas'
 alias tad='cd ~/Projects/gemini/tadnet'
-alias tadu='cd ~/Projects/gemini/tadnet/tacc_user_manager'
-alias tadc='cd ~/Projects/gemini/tadnet/tacc_user_manager/vendor/plugins/tacc_common'
+alias epic='cd ~/Projects/gemini/tadnet'
+alias tadu='cd ~/Projects/gemini/tadnet/user_manager'
+alias tadc='cd ~/Projects/gemini/tadnet/user_manager/vendor/plugins/tacc_common'
 
 # Projects: Personal
 alias tc='cd ~/Projects/personal/trajet_colle/'
