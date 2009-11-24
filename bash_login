@@ -54,7 +54,7 @@ alias fctda='cd ~/Projects/gemini/fctd/assets'
 alias pd='cd ~/Projects/gemini/place_and_displaced/rails'
 alias atlas='cd ~/Projects/gemini/fractured_atlas'
 alias tad='cd ~/Projects/gemini/tadnet'
-alias epic='cd ~/Projects/gemini/tadnet'
+alias epic='cd ~/Projects/gemini/tadnet/epic'
 alias tadu='cd ~/Projects/gemini/tadnet/user_manager'
 alias tadc='cd ~/Projects/gemini/tadnet/user_manager/vendor/plugins/tacc_common'
 
