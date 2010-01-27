@@ -1,4 +1,4 @@
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sphinx/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql83/bin:$PATH"
+export PATH="/Users/zeke/src:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sphinx/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql83/bin:$PATH"
 export PS1="\w >"
 export HISTSIZE=100000
 export HISTFILESIZE=409600
@@ -11,9 +11,15 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias la='ls -Alh'
 alias fl='open -a ForkLift $1'
-# alias ps='open -a "Adobe Photoshop CS4" $1'
+alias photo='open -a "Adobe Photoshop CS4" $1'
 alias il='open -a "Adobe Illustrator" $1' # Not sure why this doesn't need the 'CS4' part
 alias dot='cd ~/Projects/personal/dotfiles'
+
+
+function cheat {
+	echo "du -hd 1 # human readable sizes, one directory deep"
+}
+
 
 # These aliases assume that mysql was installed using the Hivelogic tutorial..
 # http://hivelogic.com/articles/compiling-mysql-on-snow-leopard/
@@ -105,8 +111,8 @@ function push_and_pull {
 }
 
 # Ruby/Rails
-alias mater='mate app config db doc lib public test spec README*'
-alias materp='mate app config db doc lib public spec vendor README*'
+alias mater='mate app config db doc lib public test spec features README* Rakefile'
+alias materp='mate app config db doc lib public test spec vendor features README* Rakefile'
 alias c='script/console'
 alias s='script/server'
 alias irb='irb'  
@@ -152,3 +158,11 @@ function autopush {
   chmod 755 .git/hooks/post-commit
   echo 'This git repo now pushes automatically post-commit'
 }
+##
+# Your previous /Users/zeke/.bash_login file was backed up as /Users/zeke/.bash_login.macports-saved_2009-12-11_at_14:55:03
+##
+
+# MacPorts Installer addition on 2009-12-11_at_14:55:03: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
