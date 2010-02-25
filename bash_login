@@ -63,12 +63,15 @@ alias tad='cd ~/Projects/gemini/tadnet'
 alias epic='cd ~/Projects/gemini/tadnet/epic'
 alias tadu='cd ~/Projects/gemini/tadnet/user_manager'
 alias tadc='cd ~/Projects/gemini/tadnet/user_manager/vendor/plugins/tacc_common'
+alias nche='cd ~/Projects/gemini/nche/app'
+alias pa='cd ~/Projects/gemini/pa_spaces/app'
 
 # Projects: Personal
 alias tc='cd ~/Projects/personal/trajet_colle/'
 alias met='cd ~/Projects/ucsb/musique_et_torture/'
 alias q='cd ~/Projects/personal/queriac/trunk'
 alias qa='cd ~/Projects/personal/queriac/assets'
+alias good='cd ~/Projects/good/badges/'
 
 # Projects: Old
 # alias b='cd ~/Projects/rgc/bobateacompany.com/trunk'
@@ -111,8 +114,8 @@ function push_and_pull {
 }
 
 # Ruby/Rails
-alias mater='mate app config db doc lib public test spec features README* Rakefile'
-alias materp='mate app config db doc lib public test spec vendor features README* Rakefile'
+alias mater='mate app config db doc lib public test spec features README* Rakefile Gemfile'
+alias materp='mate app config db doc lib public test spec vendor features README* Rakefile Gemfile'
 alias c='script/console'
 alias s='script/server'
 alias irb='irb'  
@@ -158,11 +161,5 @@ function autopush {
   chmod 755 .git/hooks/post-commit
   echo 'This git repo now pushes automatically post-commit'
 }
-##
-# Your previous /Users/zeke/.bash_login file was backed up as /Users/zeke/.bash_login.macports-saved_2009-12-11_at_14:55:03
-##
 
-# MacPorts Installer addition on 2009-12-11_at_14:55:03: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
+if [[ -s /Users/zeke/.rvm/scripts/rvm ]] ; then source /Users/zeke/.rvm/scripts/rvm ; fi
