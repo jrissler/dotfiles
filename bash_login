@@ -183,7 +183,7 @@ function swap {
     pushd > /dev/null
 }
 # s is an alias to the swap function
-alias s=swap
+# alias s=swap
 
 # Pop the top (current) directory off the stack
 # and move to the next directory
