@@ -155,6 +155,7 @@ alias gd='git diff -v'
 
 # Open current project's github page (from http://github.com/guides/jump-to-github-from-your-repository)
 alias github="open \`git config -l | grep 'remote.origin.url' | sed -En 's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
+alias commits="open \`git config -l | grep 'remote.origin.url' | sed -En 's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4\/commits/p'\`"
 
 # An enhanced 'cd' - push directories
 # onto a stack as you navigate to it.
