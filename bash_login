@@ -1,5 +1,12 @@
 export PATH="/Users/zeke/src:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sphinx/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql83/bin:$PATH"
-export PS1="\w >"
+
+# export PS1="\w >"
+# export PS1='\[\033[00;32m\]\u\[\033[01m\]@\[\033[00;36m\]\h\[\033[01m\]:\[\033[00;35m\]\w\[\033[00m\]\[\033[01;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s`\[\033[00m\]\$ '
+# export PS1='\[\033[00;32m\]\u \[\033[00;35m\]\w\[\033[00m\]\[\033[00;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s` \[\033[00m\]\$ '
+
+# Prompt with current path and colored git branch (if there is one)
+export PS1='\w\[\033[00;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s` \[\033[00m\]>'
+
 export HISTSIZE=100000
 export HISTFILESIZE=409600
 export EDITOR="mate -w"
@@ -16,10 +23,10 @@ alias il='open -a "Adobe Illustrator" $1' # Not sure why this doesn't need the '
 alias dot='cd ~/Projects/personal/dotfiles'
 
 
+# Stuff I have a hard time remembering
 function cheat {
 	echo "du -hd 1 # human readable sizes, one directory deep"
 }
-
 
 # These aliases assume that mysql was installed using the Hivelogic tutorial..
 # http://hivelogic.com/articles/compiling-mysql-on-snow-leopard/
@@ -65,6 +72,8 @@ alias tadu='cd ~/Projects/gemini/tadnet/user_manager'
 alias tadc='cd ~/Projects/gemini/tadnet/user_manager/vendor/plugins/tacc_common'
 alias nche='cd ~/Projects/gemini/nche/app'
 alias pa='cd ~/Projects/gemini/pa_spaces/app'
+alias pg='cd ~/Projects/gemini/fractured_atlas/pocket_guides'
+
 
 # Projects: Personal
 alias tc='cd ~/Projects/personal/trajet_colle/'
@@ -114,8 +123,8 @@ function push_and_pull {
 }
 
 # Ruby/Rails
-alias mater='mate app config db doc lib public test spec features README* Rakefile Gemfile'
-alias materp='mate app config db doc lib public test spec vendor features README* Rakefile Gemfile'
+alias mater='mate app config db doc lib public test spec features README* Rakefile Gemfile .gems'
+alias materp='mate app config db doc lib public test spec vendor features README* Rakefile Gemfile .gems'
 alias c='script/console'
 alias s='script/server'
 alias irb='irb'  
@@ -156,6 +165,17 @@ alias gd='git diff -v'
 # Open current project's github page (from http://github.com/guides/jump-to-github-from-your-repository)
 alias github="open \`git config -l | grep 'remote.origin.url' | sed -En 's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
 alias commits="open \`git config -l | grep 'remote.origin.url' | sed -En 's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4\/commits/p'\`"
+
+function clone {
+	if [ $1 ]; then
+		rm -rf /tmp/tmpclone
+		git clone $1 /tmp/tmpclone
+		mate /tmp/tmpclone
+	else
+		echo "This function clones a git repo into /tmp and opens it in Texmate"
+		echo "Usage: clone <git_repo_url>"
+	fi
+}
 
 # An enhanced 'cd' - push directories
 # onto a stack as you navigate to it.
@@ -216,7 +236,6 @@ function display_stack
     fi
 }
 alias d=display_stack
-
 
 if [[ -s /Users/zeke/.rvm/scripts/rvm ]] ; then source /Users/zeke/.rvm/scripts/rvm ; fi
 	
