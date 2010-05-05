@@ -20,7 +20,7 @@ alias la='ls -Alh'
 alias fl='open -a ForkLift $1'
 alias photo='open -a "Adobe Photoshop CS4" $1'
 alias il='open -a "Adobe Illustrator" $1' # Not sure why this doesn't need the 'CS4' part
-alias dot='cd ~/Projects/personal/dotfiles'
+alias dotfiles='cd ~/Projects/personal/dotfiles'
 
 
 # Stuff I have a hard time remembering
@@ -70,15 +70,15 @@ alias tad='cd ~/Projects/gemini/tadnet'
 alias epic='cd ~/Projects/gemini/tadnet/epic'
 alias tadu='cd ~/Projects/gemini/tadnet/user_manager'
 alias tadc='cd ~/Projects/gemini/tadnet/user_manager/vendor/plugins/tacc_common'
-alias nche='cd ~/Projects/gemini/nche/app'
-alias pa='cd ~/Projects/gemini/pa_spaces/app'
-alias pg='cd ~/Projects/gemini/fractured_atlas/pocket_guides'
+alias nche='cd ~/Projects/gemini/nche/rails'
+alias pa='cd ~/Projects/gemini/pa_spaces/rails'
+alias pg='cd ~/Projects/gemini/fractured_atlas/pocket_guides/app'
 
 
 # Projects: Personal
 alias tc='cd ~/Projects/personal/trajet_colle/'
 alias met='cd ~/Projects/ucsb/musique_et_torture/'
-alias q='cd ~/Projects/personal/queriac/trunk'
+alias q='cd ~/Projects/personal/queriac/rails'
 alias qa='cd ~/Projects/personal/queriac/assets'
 alias good='cd ~/Projects/good/badges/'
 
