@@ -73,7 +73,7 @@ alias tadc='cd ~/Projects/gemini/tadnet/user_manager/vendor/plugins/tacc_common'
 alias nche='cd ~/Projects/gemini/nche/rails'
 alias pa='cd ~/Projects/gemini/pa_spaces/rails'
 alias pg='cd ~/Projects/gemini/fractured_atlas/pocket_guides/rails'
-
+alias adv='cd ~/Projects/gemini/bacam/advocacy/'
 
 # Projects: Personal
 alias tc='cd ~/Projects/personal/trajet_colle/'
@@ -81,7 +81,7 @@ alias met='cd ~/Projects/ucsb/musique_et_torture/'
 alias q='cd ~/Projects/personal/queriac/rails'
 alias qa='cd ~/Projects/personal/queriac/assets'
 alias good='cd ~/Projects/good/badges/'
-alias w='cd ~/Projects/personal/wordnik_experiments'
+alias w='cd ~/Projects/personal/wordnik_experiments/rails'
 
 # Projects: Old
 # alias b='cd ~/Projects/rgc/bobateacompany.com/trunk'
