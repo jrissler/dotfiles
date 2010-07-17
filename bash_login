@@ -71,9 +71,9 @@ alias epic='cd ~/Projects/gemini/tadnet/epic'
 alias tadu='cd ~/Projects/gemini/tadnet/user_manager'
 alias tadc='cd ~/Projects/gemini/tadnet/user_manager/vendor/plugins/tacc_common'
 alias nche='cd ~/Projects/gemini/nche/rails'
-alias pa='cd ~/Projects/gemini/pa_spaces/rails'
+alias b='cd ~/Projects/gemini/bacam/rails'
+alias ba='cd ~/Projects/gemini/bacam/assets'
 alias pg='cd ~/Projects/gemini/fractured_atlas/pocket_guides/rails'
-alias adv='cd ~/Projects/gemini/bacam/advocacy/'
 
 # Projects: Personal
 alias tc='cd ~/Projects/personal/trajet_colle/'
@@ -111,18 +111,6 @@ function rm_svn {
   find . -name .svn -print0 | xargs -0 rm -rf
 }
 
-function push_all_gits {
-  ruby ~/Projects/personal/dotfiles/push_all_gits.rb
-}
-
-function pull_all_gits {
-  ruby ~/Projects/personal/dotfiles/pull_all_gits.rb
-}
-
-function push_and_pull {
-  pull_all_gits && pull_all_gits
-}
-
 # Ruby/Rails
 alias mater='mate app config db doc lib public test spec features README* Rakefile Gemfile .gems'
 alias materp='mate app config db doc lib public test spec vendor features README* Rakefile Gemfile .gems'
@@ -157,11 +145,17 @@ alias settings='mate ~/Projects/personal/dotfiles/bash_login'
 alias refresh='source ~/.bash_login; echo ".bash_login sourced"'
 
 # Git
-alias gb='git branch -a -v'
+# alias gb='git branch -a -v'
+# alias gs='git status'
+# alias gc='git commit -v'
+# alias gca='git commit -v -a'
+# alias gd='git diff -v'
+# alias gco='git checkout'
+
 alias gs='git status'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
-alias gd='git diff -v'
+alias co='git checkout'
 
 # Open current project's github page (from http://github.com/guides/jump-to-github-from-your-repository)
 alias github="open \`git config -l | grep 'remote.origin.url' | sed -En 's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
