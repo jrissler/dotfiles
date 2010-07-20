@@ -156,6 +156,7 @@ alias gs='git status'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias co='git checkout'
+alias gitx='open -b nl.frim.GitX'
 
 # Open current project's github page (from http://github.com/guides/jump-to-github-from-your-repository)
 alias github="open \`git config -l | grep 'remote.origin.url' | sed -En 's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
