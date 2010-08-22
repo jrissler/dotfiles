@@ -26,6 +26,7 @@ alias dotfiles='cd ~/Projects/personal/dotfiles'
 # Stuff I have a hard time remembering
 function cheat {
 	echo "du -hd 1 # human readable sizes, one directory deep"
+	echo "git checkout -b advocacy remotes/origin/advocacy # check out remove branch into a new local branch"
 }
 
 # These aliases assume that mysql was installed using the Hivelogic tutorial..
