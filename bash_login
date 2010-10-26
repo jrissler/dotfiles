@@ -1,14 +1,15 @@
 export PATH="/Users/zeke/src:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sphinx/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/lib/postgresql83/bin:$PATH"
 
 # export PS1="\w >"
-# export PS1='\[\033[00;32m\]\u\[\033[01m\]@\[\033[00;36m\]\h\[\033[01m\]:\[\033[00;35m\]\w\[\033[00m\]\[\033[01;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s`\[\033[00m\]\$ '
-# export PS1='\[\033[00;32m\]\u \[\033[00;35m\]\w\[\033[00m\]\[\033[00;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s` \[\033[00m\]\$ '
 
 # Prompt with current path and colored git branch (if there is one)
 export PS1='\w\[\033[00;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s` \[\033[00m\]>'
 
+# Keep a long history
 export HISTSIZE=100000
 export HISTFILESIZE=409600
+
+# Use textmate as default editor
 export EDITOR="mate -w"
 
 # Getting around
@@ -21,7 +22,17 @@ alias fl='open -a ForkLift $1'
 alias photo='open -a "Adobe Photoshop CS4" $1'
 alias il='open -a "Adobe Illustrator" $1' # Not sure why this doesn't need the 'CS4' part
 alias dotfiles='cd ~/Projects/personal/dotfiles'
+alias cdp='cd ~/Projects'
 
+# Auto-generate aliases to directories in these directories..
+PROJECT_PARENT_DIRS[0]="$HOME/Projects"
+PROJECT_PARENT_DIRS[1]="$HOME/Projects/friends"
+PROJECT_PARENT_DIRS[2]="$HOME/Projects/gemini"
+PROJECT_PARENT_DIRS[3]="$HOME/Projects/gemini/bacam"
+PROJECT_PARENT_DIRS[4]="$HOME/Projects/gemini/fractured_atlas"
+PROJECT_PARENT_DIRS[5]="$HOME/Projects/personal"
+PROJECT_PARENT_DIRS[6]="$HOME/Projects/wordnik"
+source ~/.project_aliases
 
 # Stuff I have a hard time remembering
 function cheat {
@@ -37,8 +48,6 @@ alias mysql_stop='sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysq
 function mysqldump_all {
   for I in $(mysql -uroot -e 'show databases' -s --skip-column-names); do mysqldump -uroot $I | gzip > "$I.sql.gz"; done
 }
-
-# Reminder: use command 'gembox' to read local gem documentation!
 
 # Find all non-hidden files in the current path
 function ff() { find . -iname '*'$*'*' -type f ! -iname ".*" ! -iname "*.svn*" ; }
@@ -56,44 +65,6 @@ function tab {
 		tell application \"Terminal\" to do script \"cd $PWD \" in selected tab of the front window
 	" > /dev/null 2>&1
 }
-
-# Projects
-alias cdp='cd ~/Projects'
-
-# Projects: Gemini
-alias fu='cd ~/Projects/gemini/fractured_u/trunk'
-alias fua='cd ~/Projects/gemini/fractured_u/assets'
-alias fctd='cd ~/Projects/gemini/fctd/rails/'
-alias fctda='cd ~/Projects/gemini/fctd/assets'
-alias pd='cd ~/Projects/gemini/place_and_displaced/rails'
-alias atlas='cd ~/Projects/gemini/fractured_atlas'
-alias tad='cd ~/Projects/gemini/tadnet'
-alias epic='cd ~/Projects/gemini/tadnet/epic'
-alias tadu='cd ~/Projects/gemini/tadnet/user_manager'
-alias tadc='cd ~/Projects/gemini/tadnet/user_manager/vendor/plugins/tacc_common'
-alias nche='cd ~/Projects/gemini/nche/rails'
-alias b='cd ~/Projects/gemini/bacam/rails'
-alias ba='cd ~/Projects/gemini/bacam/assets'
-alias pg='cd ~/Projects/gemini/fractured_atlas/pocket_guides/rails'
-
-# Projects: Personal
-alias tc='cd ~/Projects/personal/trajet_colle/'
-alias met='cd ~/Projects/ucsb/musique_et_torture/'
-alias q='cd ~/Projects/personal/queriac/rails'
-alias qa='cd ~/Projects/personal/queriac/assets'
-alias good='cd ~/Projects/good/badges/'
-alias w='cd ~/Projects/personal/wordnik_experiments/rails'
-
-# Projects: Old
-# alias b='cd ~/Projects/rgc/bobateacompany.com/trunk'
-# alias ba='cd ~/Projects/rgc/bobateacompany.com/assets'
-# alias cm='cd ~/Projects/rgc/coffeemystica.com/trunk'
-# alias cma='cd ~/Projects/rgc/coffeemystica.com/assets'
-# alias z='cd ~/Projects/givezooks/trunk'
-# alias za='cd ~/Projects/givezooks/assets'
-# alias zh='cd ~/Projects/givezooks/side_projects/zhook/trunk'
-
-
 
 # A substitute for cd that gives it history. (doesn't work right for directories containing spaces)
 # function cd {
@@ -152,7 +123,6 @@ alias refresh='source ~/.bash_login; echo ".bash_login sourced"'
 # alias gca='git commit -v -a'
 # alias gd='git diff -v'
 # alias gco='git checkout'
-
 alias gs='git status'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
@@ -235,6 +205,5 @@ function display_stack
 alias d=display_stack
 
 if [[ -s /Users/zeke/.rvm/scripts/rvm ]] ; then source /Users/zeke/.rvm/scripts/rvm ; fi
-	
 	
 	
